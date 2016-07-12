@@ -1,0 +1,54 @@
+# JavaSchool
+//////////////////////////////////////////////
+public class Task_2002{
+	public static void main(String[] args){
+		int[] n = {1,5,12,45,15};
+		int sum=0;
+		for(int i=0; i<5; i++)
+			sum = sum+n[i];
+		System.out.println("Сумма: "+sum);
+	}
+}
+/////////////////////////////////////////////
+public class Task_2021{
+ public static int[] maxx (int[] mas)
+ {
+	int max = 0;
+	for(int i=0;i<mas.length;i++)
+		if(mas[i]>max)
+			max = mas[i];
+		for(int j=0;j<mas.length;j++)
+			if(mas[j] == max )
+				for(int k=0;k<2;k++)
+					mas[j] = mas[j]/2;
+			
+	return mas;
+ }
+public static void main(String[] args)
+ {
+	int[] mas = {1,2,2,3,5};
+	mas = maxx(mas);
+	for(int i=0;i<mas.length;i++)
+		System.out.print(mas[i]);
+		System.out.print(" ");
+}
+}
+/////////////////////////////////////////////////////
+public class Task_2037{
+
+public static void main(String[] args)
+ {
+	int k = 3;
+	String enline = " ,as,qwerty,zxc,asdf";
+	String[] mas = enline.split(",");
+	String rez = "";
+	for(int i=0;i<mas.length;i++)
+		if(mas[i].length()>=k)
+			rez = rez+mas[i]+",";
+	 
+	System.out.println(rez.substring(0,rez.length() -1));		
+		
+	
+}
+}
+////////////////////////////////////////////////////////////////////
