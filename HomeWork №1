@@ -1,6 +1,6 @@
 # JavaSchool
 //////////////////////////////////////////////
-public class Task_2002{
+public class HomeWork.Task_2002{
 	public static void main(String[] args){
 		int[] n = {1,5,12,45,15};
 		int sum=0;
@@ -10,7 +10,7 @@ public class Task_2002{
 	}
 }
 /////////////////////////////////////////////
-public class Task_2021{
+public class HomeWork.Task_2021{
  public static int[] maxx (int[] mas)
  {
 	int max = 0;
@@ -34,7 +34,7 @@ public static void main(String[] args)
 }
 }
 /////////////////////////////////////////////////////
-public class Task_2037{
+public class HomeWork.Task_2037{
 
 public static void main(String[] args)
  {
