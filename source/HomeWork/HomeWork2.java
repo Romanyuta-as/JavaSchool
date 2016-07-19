@@ -63,6 +63,6 @@ public class HomeWork2 {
 
     public static void main(String[] args) throws IOException
     {
-        //Read("C:\\Users\\AlexRS\\Desktop\\text.txt");
+        Read("C:\\Users\\Student\\Desktop\\text.txt");
     }
 }
