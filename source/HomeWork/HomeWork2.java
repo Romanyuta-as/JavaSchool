@@ -11,6 +11,7 @@ public class HomeWork2 {
             System.out.println("Такого файла не существует");
         else
         {
+            ArrayList<String> al = new ArrayList<>();
             StringBuilder sb = new StringBuilder();
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             String str = "";
@@ -21,12 +22,9 @@ public class HomeWork2 {
 
             }
 
-
-            String[] mas;
-            String rez = sb.toString().replace("."," ");
-            rez = rez.replace(","," ");
-            mas = rez.split(" ");
-            Sort(mas);
+            Collections.addAll(al,sb.toString().split(" "));
+            Sort(al);
+            print(al);
 
 
 
@@ -35,21 +33,18 @@ public class HomeWork2 {
 
     }
 
-    public static void Sort (String [] mas)
+    public static void Sort (ArrayList<String> al)
     {
-        int chet = 1;
-        ArrayList<String> al = new ArrayList<String>();
-        while(chet!=100)
+        Collections.sort(al, (o1, o2) -> o1.toString().compareTo(o2.toString()));
+    }
+
+    public static void print(ArrayList<String> mas)
+    {
+        Iterator<String> it = mas.iterator();
+        while (it.hasNext())
         {
-            for(int i=0;i<mas.length;i++)
-            {
-                if(mas[i].length()==chet)
-                    al.add(mas[i]);
-            }
-            chet++;
+            System.out.println(it.next().toString());
         }
-        for(int i= 0; i<al.size();i++)
-            System.out.println(al.get(i));
     }
 
     public static boolean Exitsts(String fileName)
@@ -63,6 +58,6 @@ public class HomeWork2 {
 
     public static void main(String[] args) throws IOException
     {
-        Read("C:\\Users\\Student\\Desktop\\text.txt");
+        Read("C:\\Users\\AlexRS\\Desktop\\text.txt");
     }
 }
