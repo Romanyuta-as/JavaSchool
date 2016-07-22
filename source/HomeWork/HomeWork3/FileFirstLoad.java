@@ -25,7 +25,7 @@ public class FileFirstLoad {
         String[] mas = sb.toString().split(" ");
         for(int i=0;i<mas.length;i++)
         {
-            files(new File(mas[i],mas[i].length()));
+            //files(new File(mas[i],mas[i].length()));
         }
 
         return files;
