@@ -9,7 +9,8 @@ import java.util.LinkedList.*;
  * Created by Student on 19.07.2016.
  */
 public class Example2_LinkedList {
-   /*
+
+/*
     public static void main(String[] args)
     {
         LinkedList<Person> persons = new LinkedList<>();
