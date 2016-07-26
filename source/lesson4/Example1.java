@@ -1,7 +1,4 @@
-package ru.sbertech.lesson3.BeforeGenerics.lesson4;
-
-import java.util.ArrayList;
-import java.util.List;
+package lesson4;
 
 /**
  * Created by Student on 22.07.2016.
