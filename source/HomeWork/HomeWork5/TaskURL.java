@@ -22,6 +22,7 @@ public class TaskURL {
             while ((vuvod = br.readLine())!= null){
                 System.out.println(vuvod);
             }
+            br.close();
 
         }catch (Exception e){
             System.out.println("Вы ввели неверный адрес сайта введите снова");
