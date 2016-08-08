@@ -8,28 +8,9 @@ import java.util.Map;
  * Created by Student on 19.07.2016.
  */
 public class PersonFirstLoad {
+
+
     /*
-    public static Collection<Person>init(Collection<Person> persons){
-        persons.put(new Person(1L,"Байда Илья Вадимович","79185551234"));
-        persons.put(new Person(2L,"Истамов Аскар Зохитович","79185551233"));
-        persons.put(new Person(3L,"Кириловский Сергей Владимирович","79185551232"));
-        persons.put(new Person(5L,"Коджаев Шамиль Амил оглы","79185551231"));
-        persons.put(new Person(4L,"Нешин Антон Сергеевич","79185551230"));
-        persons.put(new Person(6L,"Орловский Николай Михайлович","79185551229"));
-        persons.put(new Person(7L,"Павлов Иван Геннадьевич","79185551228"));
-        persons.put(new Person(8L,"Романюта Александр Сергеевич","79185551227"));
-        persons.put(new Person(9L,"Комягин Денис Михайлович","79185551226"));
-        persons.put(new Person(9L,"Комягин Денис Михайлович","79185551226"));
-        persons.put(new Person(10L,"Чернявский Александр Игоревич","79185551225"));
-        persons.put(new Person(10L,"Чернявский Александр Игоревич","79185551225"));
-        persons.put(new Person(11L,"Шмалько Светлана Григорьевна","79185551224"));
-        persons.put(new Person(12L,"Малеванный Михаил Сергеевич","79185551223"));
-        persons.put(new Person(13L,"Малахова Елена Александровна","79185551222"));
-        persons.put(new Person(14L,"Плешаков Владимир Владимирович","79185551221"));
-        persons.put(new Person(15L,"Жовнир Екатерина Юрьевна","79185551220"));
-        persons.put(new Person(16L,"Смолянинова Дарья Дмитриевна","79185551219"));;
-        return persons;
-    */
         public static Map<String,Person> init(Map <String, Person> persons){
             persons.put("1",new Person(1L,"Байда Илья Вадимович","79185551234"));
             persons.put("2",new Person(2L,"Истамов Аскар Зохитович","79185551233"));
@@ -50,16 +31,10 @@ public class PersonFirstLoad {
             return persons;
 
     }
-    /*
-    public static void  print(Collection<Person> persons)
-    {
-        Iterator<Person> it = persons.iterator();
-        while (it.hasNext())
-        {
-            System.out.println(it.next().toString());
-        }
-    }
-*/
+    */
+
+
+/*
     public static void  print(Map<String,Person> persons)
     {
         Iterator<String> it = persons.keySet().iterator();
@@ -68,4 +43,5 @@ public class PersonFirstLoad {
             System.out.println(persons.get(it.next().toString()));
         }
     }
+    */
 }
