@@ -22,10 +22,9 @@ public class StructureChat {
 
         @Override
         public String toString() {
-            return "Message{" +
-                    "user='" + user + '\'' +
-                    ", message='" + message + '\'' +
-                    '}';
+            return "Сообщение от " +
+                    "пользователя'" + user + '\'' +
+                    "  " + message + '\'';
         }
 
         String getKey(){
