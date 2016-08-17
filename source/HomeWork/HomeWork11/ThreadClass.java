@@ -30,6 +30,7 @@ public class ThreadClass {
 
         return  Integer.valueOf(sb.toString());
     }
+
     public  static ArrayList<String> readBook(String fileName) throws IOException {
         StringBuilder sb = new StringBuilder();
         BufferedReader br = new BufferedReader(new FileReader(fileName));
