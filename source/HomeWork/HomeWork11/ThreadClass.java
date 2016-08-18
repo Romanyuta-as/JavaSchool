@@ -45,9 +45,9 @@ public class ThreadClass {
        return book;
     }
     public static void main(String[] args) throws IOException {
-        Integer pool = readFileSettings("C:\\Users\\1\\Documents\\1.txt");
-        ArrayList<String> words = readBook("C:\\Users\\1\\Documents\\2.txt");
-        ExecutorService es = Executors.newFixedThreadPool(20);
+        Integer pool = readFileSettings("C:\\Users\\Student\\IdeaProjects\\JavaSchoolRND2016\\source\\HomeWork\\HomeWork11\\1.txt");
+        ArrayList<String> words = readBook("C:\\Users\\Student\\IdeaProjects\\JavaSchoolRND2016\\source\\HomeWork\\HomeWork11\\2.txt");
+        ExecutorService es = Executors.newFixedThreadPool(pool);
         List<Future<String>> list = new ArrayList<>();
         ArrayList<String> test = new ArrayList<>();
         for (int i=0;i<words.size();i++) {
@@ -55,8 +55,6 @@ public class ThreadClass {
                Future<String> future =
                        es.submit(() -> "Слово: "+slovo+ "  -----  "+ "Длина: "+slovo.length()+"----------"+"Номер потока: "+Thread.currentThread().getName());
             list.add(future);
-
-
         }
         for(Future<String> fut : list){
             try {
