@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 /**
  * Created by Student on 29.08.2016.
  */
-//написать чат с определенным количеством людей, если подключилось больше то говорить клиенту чтобы он ожидал(широковещательный)
+//написать чат с определенным количеством людей, если подключилось больше то говорить клиенту чтобы он ожидал(широковещательный)"Использовать симафоры"
 public class MyServer {
     public static final int DEFAULT_PORT = 4444;
     public static void main(String[] args) throws IOException {
