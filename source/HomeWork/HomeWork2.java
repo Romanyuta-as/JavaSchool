@@ -35,7 +35,7 @@ public class HomeWork2 {
 
     public static void Sort (ArrayList<String> al)
     {
-        Collections.sort(al, (o1, o2) -> o1.toString().compareTo(o2.toString()));
+        //Collections.sort(al, (o1, o2) -> o1.toString().compareTo(o2.toString()));
     }
 
     public static void print(ArrayList<String> mas)
