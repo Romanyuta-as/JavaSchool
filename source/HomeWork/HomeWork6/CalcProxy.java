@@ -8,14 +8,19 @@ import java.lang.reflect.Proxy;
 public class CalcProxy {
     public static void main(String[] args) {
         MyCalc myCalc = new MyCalc();
-        ICalc iCalc =  (ICalc)Proxy.newProxyInstance(MyCalc.class.getClassLoader(),MyCalc.class.getInterfaces(),new MyInvocationHandler<>(myCalc));
+        MyInvocationHandler cache = new MyInvocationHandler<>(myCalc);
+        ICalc iCalc =  (ICalc)Proxy.newProxyInstance(MyCalc.class.getClassLoader(),MyCalc.class.getInterfaces(),cache);
         double result = iCalc.sum(1,2);
         System.out.println(result);
-        result = iCalc.sum(1,2);
+        result = iCalc.div(1,2);
         System.out.println(result);
         result = iCalc.sum(1,2);
 
         System.out.println(result);
+
+//        DownloadsDataBase dataBase = new DownloadsDataBase();
+//        dataBase.downloadDBToStructure();
+        cache.unloading();
 
     }
 

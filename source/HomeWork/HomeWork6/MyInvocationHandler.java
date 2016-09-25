@@ -13,8 +13,10 @@ public class MyInvocationHandler<T> implements InvocationHandler {
     //private List<Structure> cache = new LinkedList<>();
     private Map<Structure,Object> cache = new HashMap<>();
     private Structure structure;
+    private DownloadsDataBase dataBase = new DownloadsDataBase();
     public MyInvocationHandler(T t) {
         this.t = t;
+      cache =  dataBase.downloadDBToStructure();
     }
 
 
@@ -22,7 +24,7 @@ public class MyInvocationHandler<T> implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 
-         structure = new Structure(method,args);
+         structure = new Structure(method.getName(),args);
         if(cache.containsKey(structure)){
             System.out.println("Взято из кэша");
             return cache.get(structure);
@@ -38,22 +40,37 @@ public class MyInvocationHandler<T> implements InvocationHandler {
         //System.out.println("NeverSleepingEye invoke : " + method.getName());
         //return method.invoke(object,args);
     }
-    class Structure {
-        private Method method;
+    public void unloading(){
+        dataBase.downloadStructureToDB(cache);
+    }
+    static class Structure {
+        private String methodName;
         private Object[] args;
 
 
 
-        public Structure(Method method, Object[] args) {
-            this.method = method;
+        public Structure(String methodName, Object[] args) {
+            this.methodName = methodName;
             this.args = args;
 
         }
 
+        public Object[] getArgs() {
+            return args;
+        }
 
+        @Override
+        public boolean equals(Object obj) {
+            if(this == obj) return false;
+            if(obj == null) return false;
+            Structure str = (Structure) obj;
+            if(!methodName.equals(str.getMethodName())) return false;
+            return Arrays.equals(args,str.getArgs());
+
+        }
 
         public String getMethodName() {
-            return method.getName();
+            return methodName;
         }
         @Override
        public int hashCode() {
